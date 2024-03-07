@@ -7,9 +7,10 @@ interface Props {
   img: string | any;
   place: string;
   price: string;
+  btnText: string | any;
 }
 
-const {  title, des, img, place, price } = Astro.props;
+const {  title, des, img, place, price ,btnText } = Astro.props;
 //components
 import { Icon } from "astro-icon/components";
 import Button from "./ui/Button.astro";
@@ -45,7 +46,7 @@ import "../styles/scss/components/ui/Card.scss";
         aria="احجز الان"
         ClassName="btn-popup booking-btn mb-2 py-5 round-6 mx-auto d-flex items-center justify-center fs-18 fw-500"
       >
-        احجز الان
+         {btnText}
       </Button>
     </div>
     <!-- end -->
