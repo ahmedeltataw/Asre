@@ -10,11 +10,11 @@ export const HeaderData: LinkType[] = [
     },
     {
         title: "المعالم السياحية",
-        path: "TouristView"
+        path: "TouristView.html"
     },
     {
         title: "الجولات السياحية",
-        path: "ViewTours"
+        path: "ViewTours.html"
     },
     {
         title: " جدول الرحلات ",

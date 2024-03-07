@@ -331,11 +331,11 @@ const HeaderData = [
   },
   {
     title: "المعالم السياحية",
-    path: "TouristView"
+    path: "TouristView.html"
   },
   {
     title: "الجولات السياحية",
-    path: "ViewTours"
+    path: "ViewTours.html"
   },
   {
     title: " جدول الرحلات ",
@@ -423,10 +423,10 @@ const $$Astro$q = createAstro();
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$q, $$props, $$slots);
   Astro2.self = $$Header;
-  return renderTemplate`${maybeRenderHead()}<header class="absolute top-0"> <div class="container"> <nav class="d-flex items-center justify-between py-2"> <a href="/" class="logo"> ${renderComponent($$result, "Image", $$Image, { "src": Logo, "alt": `logo for Gift Genius `, "format": "webp", "quality": 70, "class": `img-cover`, "loading": "eager" })} </a> ${renderComponent($$result, "Button", $$Button, { "type": "button", "ClassName": "icon-nav-base", "aria": "open menu" }, { "default": ($$result2) => renderTemplate` <span></span><span></span><span></span> ` })} ${renderComponent($$result, "LinkList", $$LinkList, {})} ${renderComponent($$result, "Button", $$Button, { "type": "button", "aria": "Auth page", "ClassName": "btn-popup nav-button round-6" }, { "default": ($$result2) => renderTemplate` <a href="/Auth" class="py-6 px-14 fw-700 fs-18">انضم الينا</a> ` })} </nav> </div> </header>`;
+  return renderTemplate`${maybeRenderHead()}<header class="absolute top-0"> <div class="container"> <nav class="d-flex items-center justify-between py-2"> <a href="/" class="logo"> ${renderComponent($$result, "Image", $$Image, { "src": Logo, "alt": `logo for Gift Genius `, "format": "webp", "quality": 70, "class": `img-cover`, "loading": "eager" })} </a> ${renderComponent($$result, "Button", $$Button, { "type": "button", "ClassName": "icon-nav-base", "aria": "open menu" }, { "default": ($$result2) => renderTemplate` <span></span><span></span><span></span> ` })} ${renderComponent($$result, "LinkList", $$LinkList, {})} ${renderComponent($$result, "Button", $$Button, { "type": "button", "aria": "Auth page", "ClassName": "btn-popup nav-button round-6" }, { "default": ($$result2) => renderTemplate` <a href="Auth.html" class="py-6 px-14 fw-700 fs-18">انضم الينا</a> ` })} </nav> </div> </header>`;
 }, "D:/project/version/2/Astro/Asre/src/components/header/Header.astro", void 0);
 
-const icons = {"local":{"prefix":"local","lastModified":1709791277,"icons":{"arrow-down":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 10 5 5 5-5\"/>"},"arrow-left":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 6 2 16l8 10M2 16h28\"/>","width":32,"height":32},"location":{"body":"<path fill=\"currentColor\" d=\"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7M7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9\"/><circle cx=\"12\" cy=\"9\" r=\"2.5\" fill=\"currentColor\"/>"},"user":{"body":"<path fill=\"currentColor\" d=\"M15.71 12.71a6 6 0 1 0-7.42 0 10 10 0 0 0-6.22 8.18 1 1 0 0 0 2 .22 8 8 0 0 1 15.9 0 1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1 10 10 0 0 0-6.25-8.19M12 12a4 4 0 1 1 4-4 4 4 0 0 1-4 4\"/>"}},"width":24,"height":24}};
+const icons = {"local":{"prefix":"local","lastModified":1709791964,"icons":{"arrow-down":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 10 5 5 5-5\"/>"},"arrow-left":{"body":"<path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 6 2 16l8 10M2 16h28\"/>","width":32,"height":32},"location":{"body":"<path fill=\"currentColor\" d=\"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7M7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9\"/><circle cx=\"12\" cy=\"9\" r=\"2.5\" fill=\"currentColor\"/>"},"user":{"body":"<path fill=\"currentColor\" d=\"M15.71 12.71a6 6 0 1 0-7.42 0 10 10 0 0 0-6.22 8.18 1 1 0 0 0 2 .22 8 8 0 0 1 15.9 0 1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1 10 10 0 0 0-6.25-8.19M12 12a4 4 0 1 1 4-4 4 4 0 0 1-4 4\"/>"}},"width":24,"height":24}};
 
 const cache = /* @__PURE__ */ new WeakMap();
 
