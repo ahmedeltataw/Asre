@@ -8,9 +8,10 @@ interface Props {
   place: string;
   price: string;
   btnText: string | any;
+  path:string,
 }
 
-const {  title, des, img, place, price ,btnText } = Astro.props;
+const {  title, des, img, place, price ,btnText,path } = Astro.props;
 //components
 import { Icon } from "astro-icon/components";
 import Button from "./ui/Button.astro";
@@ -18,7 +19,7 @@ import Button from "./ui/Button.astro";
 import "../styles/scss/components/ui/Card.scss";
 ---
 
-<a href='/'>
+<a href={path}>
   <div class="card round-8">
     <div class="top">
       <Image

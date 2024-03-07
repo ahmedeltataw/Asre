@@ -1,0 +1,91 @@
+@use "../../helpers/extend" as *;
+@use "../../helpers/mixin" as *;
+@use "../../helpers/color" as *;
+
+.detailsSection {
+    @extend %section;
+    // background-color: red;
+    padding-top: 10vh;
+    color: $text;
+    min-height: 80vh;
+
+    .title {
+        min-width: 120px;
+        opacity: .8;
+    }
+
+    .name,
+    .price {
+        color: $hover-1;
+    }
+
+    .price {
+        span {
+            opacity: .7;
+            color: $text;
+        }
+    }
+
+    .overview {
+        width: 450px;
+        max-width: 100%;
+        line-height: 1.5;
+        @extend %responsive-text;
+        -webkit-line-clamp: 3;
+    }
+
+    .btn-popup {
+        background-color: $hover-1;
+        border-width: 0;
+        width: 40%;
+    }
+
+    .img-container {
+        box-shadow: -5px 9px 2rem rgba($color: $text, $alpha: .5);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: -16px;
+            background-color: $hover-1;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+        }
+    }
+
+    .full-img-container {
+        img {
+            filter: grayscale(50%);
+            transition: $t-s;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    @media(max-width:991px) {
+        .row-left {
+            order: 1;
+
+            .left-side {
+                margin-bottom: 10vh;
+
+                .img-container {
+                    &::before {
+                        right: -10px;
+                    }
+                }
+            }
+        }
+
+        .row-right {
+            order: 2;
+        }
+
+    }
+}

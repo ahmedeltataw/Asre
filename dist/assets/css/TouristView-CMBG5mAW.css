@@ -1,1 +1,54 @@
-@media (max-width:991px){.card .body .des{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}}.card{background-color:#fafafa;box-shadow:0 7px 1.25rem #150c0559}.card .top img{border-top-left-radius:8px;border-top-right-radius:8px}.card .body{color:#150c05;padding:10px 15px}.card .body .place{opacity:.8;font-size:1.125rem}.card .body .place svg{aspect-ratio:1;color:#e39155;width:20px}.card .body .des,.card .body .price{opacity:.8}.card .body h3{color:#b5794d}.card .body .price span{opacity:1;font-size:1.5rem;font-weight:700}.card .body .booking-btn{background-color:#b5794d;width:70%}
+@media (max-width:991px) {
+    .card .body .des {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden
+    }
+}
+
+.card {
+    background-color: #fafafa;
+    box-shadow: 0 7px 1.25rem #150c0559
+}
+
+.card .top img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+
+.card .body {
+    color: #150c05;
+    padding: 10px 15px
+}
+
+.card .body .place {
+    opacity: .8;
+    font-size: 1.125rem
+}
+
+.card .body .place svg {
+    aspect-ratio: 1;
+    color: #e39155;
+    width: 20px
+}
+
+.card .body .des,
+.card .body .price {
+    opacity: .8
+}
+
+.card .body h3 {
+    color: #b5794d
+}
+
+.card .body .price span {
+    opacity: 1;
+    font-size: 1.5rem;
+    font-weight: 700
+}
+
+.card .body .booking-btn {
+    background-color: #b5794d;
+    width: 70%
+}

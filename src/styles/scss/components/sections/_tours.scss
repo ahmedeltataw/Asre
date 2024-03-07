@@ -5,6 +5,19 @@
 .tours {
     @extend %section;
 
+    .search-btn {
+        background-color: $hover-1;
+        border: 0;
+        color: #fff;
+
+        a {
+            color: #fff;
+            transition: $t-s;
+        }
+
+
+    }
+
     .top-tours {
         padding: 5vh 0;
 
@@ -12,17 +25,7 @@
             color: $hover-1;
         }
 
-        .search-btn {
-            background-color: $hover-1;
-            border: 0;
 
-            a {
-                color: #fff;
-                transition: $t-s;
-            }
-
-
-        }
     }
 
     .form-container {
@@ -32,12 +35,19 @@
         width: 100%;
         height: 100%;
         z-index: 1024;
+        transition: $t-l;
         display: none;
+        opacity: 0;
+            transform: scale(0);
+        &.active{
+            opacity: 1;
+            transform: scale(1);
+        }
         form {
             width: 600px;
             height: 400px;
             max-width: 100%;
-            background-color: #fafafa;
+            background-color: #fff;
             border-radius: 8px;
             margin: 0 auto;
             @include centerPosition;
@@ -48,15 +58,62 @@
                 max-width: 100%;
 
                 input {
-                    @include input(40px, 100%, rgba($color: #000000, $alpha: .4))
+                    @include input(40px, 100%, rgba($color: #000000, $alpha: .2));
+                    border-radius: 6px;
+
                 }
+
+
             }
 
+
+
+
             .userDetails {
-               .form-group {
-                width: 200px;
-               }
+                label {
+                    flex-shrink: 0;
+                }
+
+                input {
+                    text-align: center;
+                }
+
+                .mins,
+                .more {
+                    background-color: $hover-1;
+                    width: 20%;
+                    height: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #fff;
+
+                }
+
+                .mins {
+                    left: -5px;
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+                }
+
+                .more {
+                    right: 5px;
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                }
+
+            }
+
+            .btn-close {
+                background-color: $hover-1;
+                border-top-right-radius: 6px;
+                border-bottom-left-radius: 6px;
+
+                svg {
+                    width: 22px;
+                    color: #fff;
+                }
             }
         }
+
     }
 }

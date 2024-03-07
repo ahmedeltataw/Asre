@@ -1,24 +1,27 @@
 ---
+
 import Layout from "../layouts/Layout.astro";
 
 //style
-import "../styles/scss/pages/viewTours.scss";
+import "../styles/scss/pages/details.scss";
 //components
 import Breadcrumb from "../components/ui/breadcrumb.astro";
-import Tours from "../components/ViewTours/Tours.astro";
+
 // import { Image } from "astro:assets";
+import Details from "../components/details/details2.astro"
+
 ---
 
-<Layout title="Gift Genius | عرض الجولات السياحية">
+<Layout title="Gift Genius | تفاصيل الجولات السياحية">
   <main>
     <!-- bread cumb -->
     <Breadcrumb
-      linkPage=" عرض الجولات السياحية "
+      linkPage=" تفاصيل الجولات السياحية "
       defPage="الصفحة الرئيسية"
       path="/"
       isCrumb={false}
     />
-    <Tours/>
+    <Details/>
   </main>
-  <script src="../scripts/tours.ts"></script>
+  <!-- <script src="../scripts/home.ts"></script> -->
 </Layout>

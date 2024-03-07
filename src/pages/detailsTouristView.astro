@@ -1,0 +1,27 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+
+//style
+import "../styles/scss/pages/details.scss";
+//components
+import Breadcrumb from "@components/ui/breadcrumb.astro";
+
+// import { Image } from "astro:assets";
+import Details from "../components/details/details.astro"
+
+---
+
+<Layout title="Gift Genius | تفاصيل المعالم السياحية">
+  <main>
+    <!-- bread cumb -->
+    <Breadcrumb
+      linkPage=" تفاصيل المعالم السياحية "
+      defPage="الصفحة الرئيسية"
+      path="/"
+      isCrumb={false}
+    />
+    <Details/>
+  </main>
+  <!-- <script src="../scripts/home.ts"></script> -->
+</Layout>

@@ -1,0 +1,60 @@
+---
+import Img from "@assets/slider/1.png";
+import Button from "@components/ui/Button.astro";
+import { Image } from "astro:assets";
+---
+
+<section class="detailsSection">
+  <div class="container">
+    <div class="row">
+      <!-- right-side -->
+      <div class="col-6-lg col-12-md col-12-sm row-right">
+        <div class="right-side">
+          <div class="d-flex items-center mb-6">
+            <p class="title fs-18 fw-500">اسم المعلم:</p>
+            <p class="des name fs-24 fw-700">الاهرامات المصرية</p>
+          </div>
+          <div class="d-flex items-start mb-6">
+            <p class="title fs-18 fw-500">وصف:</p>
+            <p class="des overview fs-18">
+              تم بناء الأهرامات على مدى عدة أجيال، امتدت من حوالي 2700 قبل
+              الميلاد إلى 1700 قبل الميلاد. تم تشييدها باستخدام كتل ضخمة من
+              الحجر الجيري، وتم استخراجها ونقلها إلى مواقع البناء بواسطة آلاف
+              العمال. يتطلب بناء كل هرم تخطيطًا وتنظيمًا دقيقًا وموارد كبيرة.
+            </p>
+          </div>
+          <div class="d-flex items-center mb-6">
+            <p class="title fs-18 fw-500">مكان:</p>
+            <p class="des fw-600 fs-20">الجيزة</p>
+          </div>
+          <div class="d-flex items-center mb-6">
+            <p class="title fs-18 fw-500">سعر التذكرة:</p>
+            <p class="des price fs-24 fw-800">
+              1800
+              <span class="fs-16 fw-500">ر.س</span>
+            </p>
+          </div>
+          <div class="d-flex items-center justify-center mx-auto mt-14">
+            <Button
+              type="button"
+              aria="احجز الان"
+              ClassName="btn-popup  round-6"
+            >
+              <a href="/" class="py-6 px-12 fs-18 fw-700"> احجز الان</a>
+            </Button>
+          </div>
+        </div>
+      </div>
+      <!-- left-side -->
+      <div class="col-6-lg col-12-md col-12-sm row-left">
+        <div class="left-side">
+          <div class="img-container round-6 relative">
+            <Image src={Img} alt={`صورة المعلم`} quality={70} format="webp" class={`round-6`}/>
+          </div>
+        </div>
+      </div>
+
+      <!-- end row -->
+    </div>
+  </div>
+</section>

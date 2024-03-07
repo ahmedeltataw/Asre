@@ -1,10 +1,12 @@
 ---
+import { Icon } from "astro-icon/components";
 import Button from "../ui/Button.astro";
 ---
 
 <div class="form-container">
-  <form action="">
-    <div class="date mb-8 d-flex items-center">
+  <form action="" class="relative">
+    <h4 class="text-center fs-r-30 fw-700 pb-10">احجز جولتك</h4>
+    <div class="date mb-12 d-flex items-center">
       <p class="fs-18 fw-700">التاريخ</p>
       <div class="form-group relative d-flex items-center mr-8">
         <label for="dateFrom">من</label>
@@ -13,6 +15,7 @@ import Button from "../ui/Button.astro";
           name="dateFrom"
           placeholder=" تارخ بداية الرحلة "
           class="mr-3 pr-5"
+          id="dateFrom"
         />
       </div>
       <div class="form-group relative d-flex items-center mr-8">
@@ -22,44 +25,71 @@ import Button from "../ui/Button.astro";
           name="dateTo"
           placeholder=" تارخ نهاية الرحلة "
           class="mr-3 pr-5"
+          id="dateTo"
         />
       </div>
     </div>
-    <div class="userDetails d-flex items-center justify-between">
-      <div class="form-group relative mb-5 d-flex items-center ">
-        <label for="numberOfUsers" class="fs-18 fw-800"> عدد الافراد</label>
-        <div class="number-users d-flex items-center mr-5">
-          <span class="increase">+</span>
+    <div class="userDetails mb-12 d-flex items-center">
+      <div class="form-group relative d-flex items-center mr-8">
+        <label for="numberUser" class="fs-18 fw-700">عدد الافراد</label>
+        <div class="relative">
+          <Button type="button" aria="more user" ClassName="absolute more">
+            +
+          </Button>
           <input
-            type="number"
-            name="numberOfUsers"
+            type="text"
+            name="numberUser"
             placeholder=" عدد الافراد "
+            class="mr-3"
+            id="numberUser"
             value="1"
           />
-          <span class="mins">-</span>
+          <Button type="button" aria="mins user" ClassName="absolute mins">
+            -
+          </Button>
         </div>
       </div>
-      <div class="form-group relative d-flex items-center">
-        <label for="coste">
-          التكلفة للفرد (<span> ر.س</span>)
-        </label>
+      <!-- cost -->
+      <div class="form-group relative d-flex items-center mr-8">
+        <label for="cost" class="pl-5 fs-18 fw-700"> التكلفة للفرد</label>
         <input
           type="text"
-          disabled
-          name="coste"
+          name="cost"
           placeholder=" التكلفة للفرد "
+          class="mr-3 pr-5"
+          id="cost"
           value="180"
+          disabled
         />
+        <span class="pr-5">ر.س</span>
       </div>
     </div>
-    <div class="form-group relative d-flex items-center mb-5">
-      <label for="city"> المدينة</label>
-      <input type="text" name="city" placeholder="  المدينة " />
+    <div class="form-group relative d-flex items-center mr-8 mb-12 city">
+      <label for="city" class="fs-18 fw-700"> المدينة</label>
+      <input
+        type="text"
+        name="city"
+        placeholder=" المدينة  "
+        class="mr-3 pr-5"
+        id="city"
+      />
+    </div>
+    <div class="d-flex items-center justify-center mx-auto">
+      <Button
+        type="submit"
+        aria="searching"
+        ClassName="btn-popup search-btn py-5 px-14 round-6 fs-18 fw-700"
+      >
+        بحث
+      </Button>
     </div>
     <Button
-      type="submit"
-      aria="searching"
-      ClassName="btn-popup search-btn py-6 px-12 round-6 fs-18 fw-700"
-    />
+      type="button"
+      aria="close model"
+      ClassName="btn-close py-6 px-6 absolute top-0 right-0"
+      id="closeMode"
+    >
+      <Icon name={`close`} />
+    </Button>
   </form>
 </div>
