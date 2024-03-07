@@ -1,0 +1,90 @@
+@use "../../helpers/color" as *;
+@use "../../helpers/extend" as *;
+@use "../../helpers/mixin" as *;
+
+.hero {
+    height: 100vh;
+    overflow: hidden;
+
+    // background-color: red;
+    .swiper-box {
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+        color: rgba($color: #000000, $alpha: 1.0);
+
+        .imgContainer {
+            @include overlay(100%, 100%, rgba($color: $text, $alpha: .4), left, 0);
+            height: 100vh;
+
+            &::before {
+                backdrop-filter: blur(1.5px)
+            }
+        }
+
+        .details {
+            @extend %centerPosition;
+            color: #fff;
+
+            &.active{
+                h1,
+                p {
+                    
+                    transform: translateY(0);
+                }
+                h1{
+                    opacity: 1;
+                }
+                p {
+                    opacity: .8;
+                    @extend %responsive-text ;
+                }
+            }
+
+           
+
+            h1,
+            p {
+                opacity: 0;
+                transform: translateY(100px);
+                transition: $t-l;
+            }
+
+
+        }
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: $hover-2;
+    background-color: transparent;
+    border: 1px solid $hover-2;
+    @include cricle(50px);
+    transition: $t-s;
+
+    &::after {
+        font-size: 30px;
+    }
+
+    &:hover {
+        background-color: $hover-2;
+        color: #fff;
+    }
+}
+.swiper-slide-active{
+    transition: $t-l;
+    opacity: 1 !important;
+}

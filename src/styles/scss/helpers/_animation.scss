@@ -1,0 +1,28 @@
+@mixin nav-sticky ($name) {
+    @keyframes #{$name} {
+        0% {
+            opacity: 0;
+            top: -100px;
+        }
+
+        100% {
+            opacity: 1;
+            top: 0;
+        }
+    }
+}
+@mixin opacity ($name) {
+    @keyframes #{$name} {
+        0% {
+            opacity: 0;
+            
+        }
+        50%{
+            opacity: .1;
+        }
+        100% {
+            opacity: 0;
+            
+        }
+    }
+}

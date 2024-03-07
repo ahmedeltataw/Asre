@@ -1,0 +1,28 @@
+@use "./helpers/color" as *;
+
+body {
+    background-image:
+        linear-gradient(135deg in oklab,
+            rgb(98% 98% 98%) 0%, 67%, rgb(71% 47% 30% / 50%) 101% 101%);
+    // font-weight: ;
+}
+
+html {
+    direction: rtl;
+}
+
+.btn-popup {
+    background-color: transparent;
+    border: 1px solid $hover-2;
+    color: #fff;
+
+    &::before {
+        background-color: $hover-2;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+.icon-nav-base span {
+    background-color: $hover;
+}

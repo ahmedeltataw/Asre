@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+// import img
+import Logo from "@assets/images/logo.png";
+//components
+import LinkList from "./LinkList.astro";
+import Button from "@components/ui/Button.astro";
+//style
+import "@styles/scss/components/header.scss";
+---
+
+<header class="absolute top-0">
+  <div class="container">
+    <nav class="d-flex items-center justify-between py-2">
+      <a href="/" class="logo">
+        <Image
+          src={Logo}
+          alt={`logo for Gift Genius `}
+          format="webp"
+          quality={70}
+          class={`img-cover`}
+          loading="eager"
+        />
+      </a>
+      <Button type="button" ClassName="icon-nav-base" aria="open menu">
+        <span></span><span></span><span></span>
+      </Button>
+      <LinkList />
+      <Button
+        type="button"
+        aria="Auth page"
+        ClassName="btn-popup nav-button round-6"
+      >
+        <a href="/Auth" class="py-6 px-14 fw-700 fs-18">انضم الينا</a>
+      </Button>
+    </nav>
+  </div>
+</header>

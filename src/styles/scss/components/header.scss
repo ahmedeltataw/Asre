@@ -1,0 +1,141 @@
+@use "../helpers/color" as *;
+@use "../helpers/extend" as *;
+
+header {
+    background-color: rgba($color: #fafafa, $alpha: .5);
+    backdrop-filter: blur(2px);
+    box-shadow: -1px 1px 4rem #0c010417;
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    z-index: 1024;
+
+    nav {
+        .logo {
+
+            height: 80px;
+        }
+
+        .nav-button {
+            background-color: $hover-1;
+            border: 0;
+
+            a {
+                color: #fff;
+                transition: $t-s;
+            }
+
+
+        }
+
+        .link-list {
+            &.open {
+                &.Mobile {
+                    display: flex;
+                }
+            }
+
+            &.Mobile {
+                display: none;
+            }
+        }
+
+        .nav-items {
+            a {
+                color: $text;
+                transition: $t-s;
+            }
+        }
+
+        .normalMenu {
+            .nav-items {
+                .nav-link {
+
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -5px;
+                        background-color: $hover;
+                        width: 0;
+                        height: 3px;
+                        border-radius: 15px;
+                        transition: $t-s;
+
+                    }
+
+                    &:hover {
+                        color: $hover;
+
+                        &::before {
+
+                            width: 100%;
+
+                        }
+                    }
+                }
+
+
+            }
+
+            @media(max-width: 991px) {
+                display: none;
+            }
+
+        }
+
+        .Mobile {
+            flex-direction: column;
+            position: absolute;
+            background-color: $hover;
+            box-shadow: 0px 20px 2rem rgb(12 1 4 / 50%);
+            height: 0;
+            width: 100%;
+            left: 0;
+            top: 89.6px;
+            align-items: flex-start;
+            border-bottom-left-radius: 120px;
+            overflow: hidden;
+
+            transition: 300ms ease-out;
+
+
+            .nav-items {
+                padding: 10px 36px;
+
+                .nav-link {
+                    color: #ffffff;
+                    opacity: .8;
+
+                    &:hover {
+                        opacity: 1;
+                        // transform: translateX(-15px);
+                    }
+                }
+
+                &:nth-child(1) {
+                    padding-top: 25px;
+                }
+
+                ;
+
+                &:last-child {
+                    padding-bottom: 15px;
+                }
+
+
+            }
+
+
+
+            @media(min-width: 992px) {
+                display: none;
+            }
+
+
+        }
+    }
+
+
+}

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+
+import Hero from '@components/home/Hero.astro'
+import MostWanted from"@components/home/MostWanted.astro"
+//style
+import "../styles/scss/pages/home.scss";
+
+// import { Image } from "astro:assets";
+---
+
+<Layout title="Gift Genius | Home page">
+  <main >
+    <!-- hero section -->
+    <Hero/>
+    <!-- last product section -->
+    <MostWanted/>
+    <!-- offer product section -->
+  </main>
+  <script src="../scripts/home.ts"></script>
+</Layout>

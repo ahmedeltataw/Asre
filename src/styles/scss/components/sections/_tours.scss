@@ -1,0 +1,62 @@
+@use "../../helpers/extend" as *;
+@use "../../helpers/mixin" as *;
+@use "../../helpers/color" as *;
+
+.tours {
+    @extend %section;
+
+    .top-tours {
+        padding: 5vh 0;
+
+        h2 {
+            color: $hover-1;
+        }
+
+        .search-btn {
+            background-color: $hover-1;
+            border: 0;
+
+            a {
+                color: #fff;
+                transition: $t-s;
+            }
+
+
+        }
+    }
+
+    .form-container {
+        position: fixed;
+        inset: 0;
+        background-color: rgba($color: #000000, $alpha: .4);
+        width: 100%;
+        height: 100%;
+        z-index: 1024;
+        display: none;
+        form {
+            width: 600px;
+            height: 400px;
+            max-width: 100%;
+            background-color: #fafafa;
+            border-radius: 8px;
+            margin: 0 auto;
+            @include centerPosition;
+            padding: 30px 20px;
+
+            .form-group {
+                width: 300px;
+                max-width: 100%;
+
+                input {
+                    @include input(40px, 100%, rgba($color: #000000, $alpha: .4))
+                }
+            }
+
+            .userDetails {
+               .form-group {
+                width: 200px;
+               }
+            }
+        }
+    }
+}

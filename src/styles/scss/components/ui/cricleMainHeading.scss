@@ -1,0 +1,30 @@
+@use "../../helpers/color" as*;
+@use "../../helpers/mixin" as*;
+
+.mainHeading {
+    padding: 5vh 0;
+
+    h2 {
+        color: $hover-2;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $hover-2;
+            @include cricle(15px);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            left: -30px;
+        }
+
+        &::after {
+            right: -30px;
+        }
+    }
+
+
+}

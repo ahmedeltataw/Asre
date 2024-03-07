@@ -1,0 +1,53 @@
+@use "../../helpers/extend" as *;
+@use "../../helpers/mixin" as *;
+@use "../../helpers/color" as *;
+
+.tourist-view {
+    @extend %section;
+
+    .filter-container {
+        padding: 5vh 0;
+
+        h2 {
+            color: $hover-1;
+            flex-shrink: 0;
+        }
+
+        .filter-input {
+            width: 500px;
+            max-width: 100%;
+
+            input {
+                @include input(48px, 100%, rgba($color: $hover, $alpha: .5));
+                background-color: rgba($color: $hover, $alpha: .5);
+                transition: $t-l;
+
+                &::placeholder {
+                    color: #fff;
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    border-color: $hover-1;
+
+                    &::placeholder {
+                        color: #888888;
+
+                    }
+
+                }
+            }
+
+            @media (max-width:767px) {
+                flex-flow: row wrap;
+                // width: 200px;
+
+            }
+
+        }
+        @media(max-width:580px){
+            flex-flow: row wrap;
+        }
+    }
+}

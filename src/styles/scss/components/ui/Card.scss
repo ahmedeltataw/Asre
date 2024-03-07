@@ -1,0 +1,64 @@
+@use "../../helpers/color" as *;
+@use "../../helpers/extend" as *;
+@use "../../helpers/mixin" as *;
+.card {
+    background-color: #fafafa;
+    box-shadow: 0px 7px 1.25rem #150c0559;
+
+    .top {
+
+
+        img {
+            // height: 250px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+    }
+
+    .body {
+        padding: 10px 15px;
+        color: $text;
+
+        .place {
+            font-size: 18px;
+            opacity: .8;
+
+            svg {
+                width: 20px;
+                aspect-ratio: 1;
+
+                color: $hover-2;
+            }
+        }
+
+        .des,
+        .price {
+            opacity: .8;
+        }
+        .des{
+            @extend %responsive-text ;
+        }
+
+        h3 {
+            color: $hover-1;
+        }
+
+        .price {
+            span {
+                opacity: 1;
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+
+        .booking-btn {
+            background-color: $hover-1;
+            width: 70%;
+
+        }
+    }
+
+
+
+}

@@ -1,0 +1,31 @@
+---
+
+// components
+import BoxSwiper from "./boxSwiper.astro";
+// data
+import type { SwiperType } from "../../types/types";
+import { SwiperData } from "../../data/data";
+---
+
+<!-- Slider main container -->
+<div class="swiper hero-swiper" dir="rtl">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {
+      SwiperData.map((slide: SwiperType) => (
+        <div class="swiper-slide">
+          <BoxSwiper
+            img={slide.img}
+            title={slide.title}
+            des={slide.des}
+          />
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>

@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  img: string | any;
+  title: string;
+  des: string;
+}
+const { img, title, des } = Astro.props;
+---
+
+<div class="swiper-box">
+  <div class="imgContainer relative">
+    <Image src={img} alt={`img for ${title} `} format="webp" quality={70} class={`img-cover`} />
+  </div>
+  <div class="details absolute">
+    <h1 class="fs-r-60 fw-700 pb-5">{title}</h1>
+    <p class="fs-24 fw-500 des line-relaxed">{des}</p>
+  </div>
+</div>

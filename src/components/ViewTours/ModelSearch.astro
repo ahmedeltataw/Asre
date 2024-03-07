@@ -1,0 +1,65 @@
+---
+import Button from "../ui/Button.astro";
+---
+
+<div class="form-container">
+  <form action="">
+    <div class="date mb-8 d-flex items-center">
+      <p class="fs-18 fw-700">التاريخ</p>
+      <div class="form-group relative d-flex items-center mr-8">
+        <label for="dateFrom">من</label>
+        <input
+          type="text"
+          name="dateFrom"
+          placeholder=" تارخ بداية الرحلة "
+          class="mr-3 pr-5"
+        />
+      </div>
+      <div class="form-group relative d-flex items-center mr-8">
+        <label for="dateFrom">الي</label>
+        <input
+          type="text"
+          name="dateTo"
+          placeholder=" تارخ نهاية الرحلة "
+          class="mr-3 pr-5"
+        />
+      </div>
+    </div>
+    <div class="userDetails d-flex items-center justify-between">
+      <div class="form-group relative mb-5 d-flex items-center ">
+        <label for="numberOfUsers" class="fs-18 fw-800"> عدد الافراد</label>
+        <div class="number-users d-flex items-center mr-5">
+          <span class="increase">+</span>
+          <input
+            type="number"
+            name="numberOfUsers"
+            placeholder=" عدد الافراد "
+            value="1"
+          />
+          <span class="mins">-</span>
+        </div>
+      </div>
+      <div class="form-group relative d-flex items-center">
+        <label for="coste">
+          التكلفة للفرد (<span> ر.س</span>)
+        </label>
+        <input
+          type="text"
+          disabled
+          name="coste"
+          placeholder=" التكلفة للفرد "
+          value="180"
+        />
+      </div>
+    </div>
+    <div class="form-group relative d-flex items-center mb-5">
+      <label for="city"> المدينة</label>
+      <input type="text" name="city" placeholder="  المدينة " />
+    </div>
+    <Button
+      type="submit"
+      aria="searching"
+      ClassName="btn-popup search-btn py-6 px-12 round-6 fs-18 fw-700"
+    />
+  </form>
+</div>

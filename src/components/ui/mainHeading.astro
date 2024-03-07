@@ -1,0 +1,10 @@
+---
+interface Props{
+    title:string,
+}
+const {title} = Astro.props;
+import "../../styles/scss/components/ui/cricleMainHeading.scss";
+---
+<div class="mainHeading text-center">
+    <h2 class="fs-36 fw-700 d-inline-block relative">{title}</h2>
+</div>

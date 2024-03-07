@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  des: string;
+  img: string | any;
+  place: string;
+  price: string;
+}
+
+const {  title, des, img, place, price } = Astro.props;
+//components
+import { Icon } from "astro-icon/components";
+import Button from "./ui/Button.astro";
+// style
+import "../styles/scss/components/ui/Card.scss";
+---
+
+<a href='/'>
+  <div class="card round-8">
+    <div class="top">
+      <Image
+        src={img}
+        alt={`img for product`}
+        format="webp"
+        quality={70}
+        class={`img-cover`}
+      />
+    </div>
+    <div class="body">
+      <div class="d-flex items-center justify-between pb-4">
+        <h3 class="fw-700 fs-28">{title}</h3>
+        <p class="place d-flex items-center fw-700 ">
+          <Icon name={"location"} size={24} class={`ml-1`} />
+          {place}
+        </p>
+      </div>
+      <p class="des fs-18 pb-4 fw-500 line-normal">{des}</p>
+      <p class="price des fs-18 pb-8 fw-500">
+        سعر الرحلة للفرد : <span>{price}</span>
+      </p>
+      <Button
+        type="button"
+        aria="احجز الان"
+        ClassName="btn-popup booking-btn mb-2 py-5 round-6 mx-auto d-flex items-center justify-center fs-18 fw-500"
+      >
+        احجز الان
+      </Button>
+    </div>
+    <!-- end -->
+  </div>
+</a>

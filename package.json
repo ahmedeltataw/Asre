@@ -1,0 +1,33 @@
+{
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.6",
+    "astro": "^4.4.7",
+    "astro-compressor": "^0.4.1",
+    "astro-font": "^0.0.77",
+    "astro-icon": "^1.1.0",
+    "astro-purgecss": "^4.1.0",
+    "i": "^0.3.7",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-lightningcss": "^1.0.0",
+    "postcss-pxtorem": "^6.1.0",
+    "purgecss": "^5.0.0",
+    "sass": "^1.71.1",
+    "sharp": "^0.33.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.24.0",
+    "postcss-preset-env": "^9.4.0",
+    "swiper": "^11.0.7"
+  }
+}
