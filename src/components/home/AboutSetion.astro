@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import img from "../../assets/slider/1.png";
+import MainHeading from "../ui/mainHeading.astro";
+---
+
+<section class="most-wanted About">
+  <MainHeading title=" اعرف عنا " />
+  <div class="container">
+    <div class="row">
+      <!-- right -->
+      <div class="col-5-lg col-12-md col-6-sm">
+        <div class="aboutDetails pl-10">
+          <h3 class="fs-r-36 fw-800 line-relaxed mb-6">
+            نحن نقدم أفضل العروض السياحية في ميزانيتك
+          </h3>
+          <p class="fs-18 line-normal">
+            في اثري مهمتنا بسيطة: اكتشاف كنوز الماضي ومشاركتها مع العالم. نحن
+            نؤمن أنه من خلال استكشاف المواقع الأثرية والمعالم الثقافية، يمكن
+            للمسافرين اكتساب فهم أعمق للتراث الجماعي للإنسانية وتعزيز تقدير أكبر
+            للتنوع في عالمنا.
+          </p>
+        </div>
+      </div>
+      <!-- left -->
+      <div class="col-7-lg col-12-md col-6-sm">
+        <div class="img-container">
+          <Image src={img} alt={`about us img`} class={`round-6`} />
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+  </div>
+</section>

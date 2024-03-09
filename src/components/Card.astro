@@ -9,9 +9,10 @@ interface Props {
   price: string;
   btnText: string | any;
   path:string,
+  isBooking:boolean
 }
 
-const {  title, des, img, place, price ,btnText,path } = Astro.props;
+const {  title, des, img, place, price ,btnText,path ,isBooking} = Astro.props;
 //components
 import { Icon } from "astro-icon/components";
 import Button from "./ui/Button.astro";
@@ -39,9 +40,11 @@ import Button from "./ui/Button.astro";
         </p>
       </div>
       <p class="des fs-18 pb-4 fw-500 line-normal">{des}</p>
-      <p class="price des fs-18 pb-8 fw-500">
+      {isBooking&& (
+        <p class="price des fs-18 pb-8 fw-500">
         سعر الرحلة للفرد : <span>{price}</span>
       </p>
+      )}
       <Button
         type="button"
         aria="احجز الان"

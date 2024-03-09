@@ -1,0 +1,59 @@
+---
+import MainHeading from "@components/ui/mainHeading.astro";
+import Button from "@components/ui/Button.astro";
+interface Props {
+  title: string;
+  isSure: boolean;
+}
+const { title, isSure } = Astro.props;
+---
+
+<section class="cart">
+  <MainHeading title={title} />
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <td>اسم المرشد</td>
+          <td>بداية الرحلة</td>
+          <td>نهاية الرحلة</td>
+          <td>عدد الافراد</td>
+          <td>التكلفة</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> احمد التطاوي</td>
+          <td> 9-3-2024</td>
+          <td>29-3-2024</td>
+          <td> 10</td>
+          <td> 1800 ر.س</td>
+            {
+              isSure &&
+              (
+               <td>
+                 <Button
+                   type="button"
+                   aria="تاكيد الحجز"
+                   ClassName="btn-popup py-3 px-6 round-6 sure">
+                   تاكيد
+                 </Button>
+               </td>
+              )
+            }
+            
+
+          <td>
+            <Button
+              type="button"
+              aria="الغاء الحجز"
+              ClassName="btn-popup py-3 px-6 round-6 delete"
+            >
+              الغاء
+            </Button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

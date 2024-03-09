@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import AboutSection from "../components/home/AboutSetion.astro";
+import Breadcrumb from "../components/ui/breadcrumb.astro";
+//style
+import "../styles/scss/pages/home.scss";
+
+// import { Image } from "astro:assets";
+---
+
+<Layout title="Asre |  من نحن ">
+  <main>
+    <!-- bread cumb -->
+    <Breadcrumb
+      linkPage=" من نحن "
+      defPage="الصفحة الرئيسية"
+      path="/"
+      isCrumb={false}
+    />
+    <AboutSection />
+  </main>
+</Layout>

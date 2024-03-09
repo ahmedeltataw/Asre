@@ -1,5 +1,43 @@
 @use "../../helpers/extend" as *;
+@use "../../helpers/color" as *;
 
 .most-wanted {
     @extend %section;
+    
+}
+
+.servies {
+    min-height: 60vh;
+
+    .box-ser {
+        background-color: #ffffff40;
+
+
+
+        svg {
+            width: 72px;
+            color: $hover-1;
+        }
+
+        p {
+            opacity: .7;
+        }
+    }
+}
+
+
+.About{
+    min-height: 70vh;
+    .aboutDetails {
+        p {
+            opacity: .7;
+        }
+    }
+    .img-container {
+      
+
+        img {
+            box-shadow: 0 7px 1.25rem rgba(21, 12, 5, .35);
+        }
+    }
 }

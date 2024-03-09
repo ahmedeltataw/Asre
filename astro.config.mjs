@@ -35,13 +35,17 @@ export default defineConfig({
             if (/\.css$/.test(name ?? '')) {
               return 'assets/css/[name]-[hash][extname]';
             }
+            // if (/\.ts$/.test(name ?? '')) {
+            //   return 'assets/js/[name]-[hash][extname]';
+            // }
 
             // default value
             // ref: https://rollupjs.org/guide/en/#outputassetfilenames
             return 'assets/[name]-[hash][extname]';
           }
         }
-      }
+      },
+      emptyOutDir: true
     }
     // css: {
     //     transformer: "lightningcss",

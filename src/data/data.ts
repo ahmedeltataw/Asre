@@ -6,7 +6,7 @@ export const HeaderData: LinkType[] = [
     },
     {
         title: "من نحن",
-        path: "/"
+        path: "AboutUs.html"
     },
     {
         title: "المعالم السياحية",
@@ -18,7 +18,7 @@ export const HeaderData: LinkType[] = [
     },
     {
         title: " جدول الرحلات ",
-        path: "/"
+        path: "cart.html"
     }
 ];
 // swiper

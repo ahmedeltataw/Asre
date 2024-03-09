@@ -18,9 +18,10 @@ const { isBooking } = Astro.props;
           img={card.img}
           des={card.des}
           place={card.place}
-          price={card.price}
+          price={isBooking ? card.price : ""}
           btnText={isBooking ? "احجز الان" : "عرض التفاصيل"}
           path={isBooking ? 'detailsViewTours.html' : "detailsTouristView.html"}
+          isBooking={isBooking}
         />
       </div>
     ))

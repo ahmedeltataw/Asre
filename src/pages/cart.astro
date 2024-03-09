@@ -1,0 +1,24 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+
+//style
+import "../styles/scss/pages/cart.scss";
+//components
+import Breadcrumb from "../components/ui/breadcrumb.astro";
+import CartDetails from "../components/cart/CartDetails.astro"
+---
+
+<Layout title="Asre | تفاصيل المعالم السياحية">
+  <main>
+    <!-- bread cumb -->
+    <Breadcrumb
+      linkPage="  جدول الرحلات  "
+      defPage="الصفحة الرئيسية"
+      path="/"
+      isCrumb={false}
+    />
+    <CartDetails title="تاكيد الحجز" isSure={true} />
+    <CartDetails title=" حجوزات سابقة" isSure={false}/>
+  </main>
+</Layout>
