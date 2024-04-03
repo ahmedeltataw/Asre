@@ -11,8 +11,10 @@ export default defineConfig({
     inlineStylesheets: 'never',
     format: 'file',
     base: '/',
-    // assetsPrefix: '/dist/'
+    assetsPrefix: './',
+    
   },
+
   image: {
     service: squooshImageService(),
     domains: ["astro.build"]
@@ -23,6 +25,7 @@ export default defineConfig({
   vite: {
     build: {
       rollupOptions: {
+       
         output: {
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
@@ -54,6 +57,8 @@ export default defineConfig({
   integrations: [compressor({
     gzip: true,
     brotli: false
-  }), purgecss({safelist:['svg']}), icon()]
+  }), purgecss({ safelist: ['svg'] }), icon()]
 });
 // safelist
+// astro.config.mjs
+

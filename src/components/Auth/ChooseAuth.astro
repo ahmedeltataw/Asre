@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="container d-flex items-start justify-center mt-14 AuthMain">
+  <section class="slideAuth relative mx-auto">
+    <div class="d-flex items-start overflow-hidden" id="container">
+      <section class="ChooseAuth d-flex items-center justify-center">
+        <!-- box for admin -->
+        <div class="Box ml-14 relative text-center round-6">
+          <Icon name={"admin"} />
+          <p class="fw-500 fs-18 pt-5">تسجيل كمشرف</p>
+          <a href="AdminAuth.html" title="AdminAuth.html" class="absolute"></a>
+        </div>
+        <div class="Box relative text-center round-6">
+          <Icon name={"client"} />
+          <p class="fw-500 fs-18 pt-5">تسجيل كمستخدم</p>
+          <a href="ClientAuth.html" title="ClientAuth.html" class="absolute"
+            ></a
+          >
+        </div>
+      </section>
+    </div>
+  </section>
+</div>

@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import SlideAuth from "../components/Auth/SlideAuth.astro"
+import SlideAuth from "../components/Auth/SlideAuth.astro";
+import ChooseAuth from "@components/Auth/ChooseAuth.astro";
 //style
 import "../styles/scss/pages/Auth.scss";
 import bgImg from "../assets/images/asre.png";
@@ -13,7 +14,7 @@ import { Image } from "astro:assets";
     <div class="imgContainer absolute">
       <Image src={bgImg} alt={`bg`} class={`img-cover`} loading="eager" />
     </div>
-    <SlideAuth />
+    <ChooseAuth />
   </main>
-  <script src="../scripts/Auth.ts"></script>
+  <!-- <script src="../scripts/Auth.ts"></script> -->
 </Layout>
